@@ -1,6 +1,7 @@
 import { features } from "../constants";
 import styles, { layout } from "../style";
 import Button from "./Button";
+import buyzible from "../assets/buyzible-hero.png"
 
 const FeatureCard = ({ icon, title, content, index }) => (
   <div className={`flex flex-row p-6 rounded-[20px] ${index !== features.length - 1 ? "mb-6" : "mb-0"} feature-card`}>
@@ -18,27 +19,30 @@ const FeatureCard = ({ icon, title, content, index }) => (
   </div>
 );
 
-const Business = () =>  (
+const About = () => (
   <section id="features" className={layout.section}>
+
+    <div className={`${layout.sectionImg} flex-col`}>
+    <img src={buyzible} alt="billing" className="w-[100%] h-[100%] relative z-[5]" />
+    </div>
+
+
     <div className={layout.sectionInfo}>
       <h2 className={styles.heading2}>
-        Key features of <br className="sm:block hidden" /> Buyzible.
+        About Buyzible
+      </h2>
+      <h2 className={styles.heading2}>
+
       </h2>
       <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-        With the right credit card, you can improve your financial life by
-        building credit, earning rewards and saving money. But with hundreds
-        of credit cards on the market.
+        We are a next generation social commerce application. We provide a payment processing solution to streamline payments through popular messaging apps like the popular Whatsapp, Messenger and many more.
       </p>
 
       <Button styles={`mt-10`} />
     </div>
 
-    <div className={`${layout.sectionImg} flex-col`}>
-      {features.map((feature, index) => (
-        <FeatureCard key={feature.id} {...feature} index={index} />
-      ))}
-    </div>
+
   </section>
 );
 
-export default Business;
+export default About;
