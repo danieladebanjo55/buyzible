@@ -1,7 +1,7 @@
 import styles from "../style";
 import { discount, robot } from "../assets";
 import GetStarted from "./GetStarted";
-import buyzible from '../assets/buyzible-hero.png';
+import buyzible from '../assets/update1.png';
 
 const Hero = () => {
   return (
